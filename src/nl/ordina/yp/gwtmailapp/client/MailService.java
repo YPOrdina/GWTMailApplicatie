@@ -1,0 +1,12 @@
+package nl.ordina.yp.gwtmailapp.client;
+
+import com.google.gwt.user.client.rpc.RemoteService;
+import com.google.gwt.user.client.rpc.RemoteServiceRelativePath;
+
+/**
+ * The client-side stub for the RPC service.
+ */
+@RemoteServiceRelativePath("mail")
+public interface MailService extends RemoteService {
+	String mailServer(String message, String sender, String recipient) throws IllegalArgumentException;
+}
